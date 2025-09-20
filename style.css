@@ -372,19 +372,9 @@
 }
 
 .home .icon {
-  background-color: var(--dark);
   position: relative;
   width: 41px;
   height: 41px;
-  border-radius: 20.5px;
-}
-
-.home .arrow {
-  position: absolute;
-  top: 11px;
-  left: 10px;
-  width: 20px;
-  height: 20px;
 }
 
 .home .label-6 {
@@ -457,14 +447,6 @@
   font-style: var(--h-3-font-style);
 }
 
-.home .arrow-wrapper {
-  background-color: var(--grey);
-  position: relative;
-  width: 41px;
-  height: 41px;
-  border-radius: 20.5px;
-}
-
 .home .illustration-3 {
   position: relative;
   width: 210px;
@@ -499,12 +481,20 @@
   font-style: var(--h-3-font-style);
 }
 
-.home .img-wrapper {
+.home .arrow-wrapper {
   background-color: #ffffff;
+  border-radius: 20.5px;
   position: relative;
   width: 41px;
   height: 41px;
-  border-radius: 20.5px;
+}
+
+.home .arrow {
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .home .label-10 {
@@ -533,6 +523,14 @@
   gap: 93px;
   position: relative;
   flex: 0 0 auto;
+}
+
+.home .img-wrapper {
+  background-color: var(--dark);
+  border-radius: 20.5px;
+  position: relative;
+  width: 41px;
+  height: 41px;
 }
 
 .home .revolving-hearts {
