@@ -965,6 +965,13 @@
   align-items: flex-start;
 }
 
+.footer-block {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+}
+
 .home .footer {
   gap: 50px;
   padding: 55px 60px 50px;
@@ -1088,105 +1095,22 @@
   white-space: nowrap;
 }
 
-/* ===== Responsive quick-fix overrides ===== */
-
-/* 0) 글로벌 이미지 기본값: 컨테이너에 맞추고 찌그러짐 방지 */
-img, .chatgpt-image, .chatgpt-image-2, .chatgpt-image-3 {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-/* 1) 페이지 기본 폭을 유연하게 */
-.home {
-  min-width: 0 !important;         /* 1440px 강제 폭 제거 */
-  min-height: 100vh !important;     /* 고정 px 높이 대신 화면 높이 기준 */
-  width: 100% !important;
-}
-
-/* 2) 큰 섹션들은 절대배치 제거하고 자연 흐름으로 쌓이게 */
-.landing-page,
-.services-block,
-.CTA-block,
-.CTA-block-2,
-.group-of-cards,
 .footer-block {
   position: relative !important;
   top: auto !important;
   left: auto !important;
   width: 100% !important;
-  margin-top: 40px !important;      /* 섹션 간 간격 */
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
-/* 3) 헤더/네비/CTA 같은 가로 1440 고정 섹션을 100%로 */
-.navigation-bar,
-.header,
-.CTA,
-.card-wrapper {
-  width: 100% !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-}
-
-/* 4) 카드들이 두 칼럼 고정이면 좁은 화면에서 깨져서 줄바꿈 */
-.div-2 {
-  flex-wrap: wrap !important;
-  gap: 20px !important;
-}
-.card, .card-2, .card-3, .card-5, .content-wrapper, .chatgpt-image-wrapper {
-  width: 100% !important;
-  max-width: 600px;
-  height: auto !important;          /* 고정 높이 제거해서 내용에 맞게 */
-  overflow: visible !important;     /* 잘림 방지 */
-}
-
-/* 5) 팀원 섹션에서 이미지 잘리는 원인(음수 마진/고정 높이) 제거 */
-.chatgpt-image-3 {
-  margin: 0 !important;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* 6) 히어로 이미지도 absolute로 올라타지 않게 */
-.illustration { height: auto !important; }
-.chatgpt-image {
-  position: static !important;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* 7) 히어로 서브 이미지(eumm_2)도 절대배치 해제 */
-.chatgpt-image-2 {
-  position: static !important;
-  width: 260px;            /* 필요 시 적당한 기본 폭 */
-  max-width: 100%;
-  height: auto !important;
-  margin: 20px auto;       /* 가운데 정렬 느낌 */
-}
-
-/* 8) 타이포가 너무 커 보이는 문제(clamp로 반응형) */
-.p { font-size: clamp(28px, 5vw, 60px) !important; }
-.text-wrapper-4,
-.text-wrapper-6,
-.text-wrapper-7,
-.text-wrapper-11,
-.text-wrapper-13,
-.text-wrapper-14 {
-  font-size: clamp(16px, 2.6vw, 18px) !important;
-  line-height: 1.5 !important;
-}
-
-/* 9) 푸터: 절대 위치 제거 + 폭 유연화 */
-.footer-block {
-  padding: 0 20px !important;
-}
-.line-4 { width: 100% !important; }
-
-/* 10) 네비/버튼 패딩 살짝 줄여서 모바일에서 덜 답답하게 */
-.button, .button-2 {
-  padding: 14px 22px !important;
-  border-radius: 12px !important;
+@media (max-width: 1439px) {
+  /* 좌표계를 1440 기준으로 유지해야 하므로 폭은 1440 유지 */
+  .home {
+    width: 1440px;                 /* 내부 좌표계 유지 */
+    min-width: 1440px;             /* 기존 값 유지 */
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top left;
+  }
+  html, body {
+    overflow-x: hidden;            /* 축소 여백 때문에 가로 스크롤 숨김 */
+  }
 }
