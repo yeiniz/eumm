@@ -154,7 +154,7 @@
 .home .button {
   all: unset;
   box-sizing: border-box;
-  border-radius: 14px;
+  border-radius: 50px;
   border: 1px solid;
   border-color: var(--dark);
   display: inline-flex;
@@ -184,7 +184,7 @@
   width: 1300px;
   align-items: flex-start;
   gap: 174px;
-  padding: 0px 100px 0px 109px;
+  padding: 0px 100px 0px 143px;
   position: relative;
   flex: 0 0 auto;
   background-color: transparent;
@@ -501,8 +501,8 @@
 
 .home .img {
   position: relative;
-  width: 210px;
-  height: 210px;
+  width: 190px;
+  height: 190px;
   margin-left: -6px;
 }
 
@@ -668,7 +668,7 @@
 
 .home .text-wrapper-7 {
   position: absolute;
-  top: 132px;
+  top: 226px;
   left: calc(50.00% - 116px);
   width: 234px;
   font-family: var(--p-font-family);
@@ -683,7 +683,7 @@
 
 .home .text-wrapper-8 {
   position: absolute;
-  top: 16px;
+  top: 144px;
   left: calc(50.00% - 144px);
   width: 288px;
   font-family: var(--h-3-font-family);
@@ -701,6 +701,14 @@
   width: 292px;
   height: 380px;
   margin-right: -2.00px;
+}
+
+.home .illustration-5 {
+  position: absolute;
+  width:59px;
+  height:59px;
+  top:24px;
+  left:118px;
 }
 
 .home .text-wrapper-9 {
@@ -850,16 +858,13 @@
   width: 34px;
   height: 34px;
   margin-left: -67px;
-  background-color: #ffffff;
   border-radius: 17px;
 }
 
-.home .linkedin {
+.home .git-icon {
   position: absolute;
-  top: 8px;
-  left: 9px;
-  width: 17px;
-  height: 17px;
+  width: 34px;
+  height: 34px;
 }
 
 .home .line {
@@ -1080,3 +1085,5 @@
   line-height: 28px;
   white-space: nowrap;
 }
+
+html { scroll-behavior: smooth; }
