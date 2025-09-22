@@ -2,8 +2,8 @@
   background-color: #ffffff;
   overflow-x: hidden;
   width: 100%;
-  min-width: 1440px;
-  min-height: 5161px;
+  min-width: 100%;
+  min-height: 100%;
   position: relative;
 }
 
