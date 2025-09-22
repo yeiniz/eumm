@@ -1121,19 +1121,6 @@ html { scroll-behavior: smooth; }
   .reveal { transition: none; opacity: 1; transform: none; }
 }
 
-@media (max-width: 1439.98px) {
-  html, body { overflow-x: hidden; } /* 가로 스크롤 방지 */
-  #scale-wrapper {
-    width: 100vw;
-    overflow: hidden; /* 스케일 시 생길 수 있는 가로 넘침 차단 */
-  }
-  /* 실제 레이아웃 루트(예: .home)에 scale이 적용될 거예요. */
-  .scale-root {
-    transform-origin: top center;
-    will-change: transform;
-  }
-}
-
 /* === Polished micro-interactions === */
 .card, .card-2, .card-3, .card-4, .content-wrapper, .eumm-png-wrapper {
   transition: transform .3s ease, box-shadow .3s ease;
