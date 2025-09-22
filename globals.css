@@ -7,6 +7,8 @@ html,
 body {
   margin: 0px;
   height: 100%;
+
+  font-family: Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
 }
 /* a blue color as a generic focus style */
 button:focus-visible {
@@ -15,4 +17,10 @@ button:focus-visible {
 }
 a {
   text-decoration: none;
+}
+
+
+/* Pretendard base */
+body, button, input, textarea, select {
+  font-family: Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
 }

@@ -44,7 +44,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: "Space Grotesk-Bold", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 700;
   color: #000000;
   font-size: 40px;
@@ -92,7 +92,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: "Space Grotesk-Bold", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 700;
   color: #000000;
   font-size: 40px;
@@ -146,7 +146,7 @@
   font-size: 20px;
   line-height: 28px;
   white-space: nowrap;
-  font-family: "Space Grotesk-Regular", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -169,7 +169,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: "Space Grotesk-Regular", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 400;
   color: #000000;
   font-size: 20px;
@@ -204,7 +204,7 @@
 .home .p {
   position: relative;
   width: 531px;
-  font-family: "Space Grotesk-Medium", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 400;
   color: transparent;
   font-size: 60px;
@@ -218,7 +218,7 @@
 }
 
 .home .text-wrapper-3 {
-  font-family: "Space Grotesk-Bold", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 700;
   color: #74b39a;
 }
@@ -226,7 +226,7 @@
 .home .span-wrapper {
   position: relative;
   width: 518px;
-  font-family: "Space Grotesk-Regular", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 400;
   color: #000000;
   font-size: 24px;
@@ -235,7 +235,7 @@
 }
 
 .home .text-wrapper-4 {
-  font-family: "Space Grotesk-Regular", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 400;
   color: #000000;
   font-size: 24px;
@@ -260,7 +260,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: "Space Grotesk-Bold", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 700;
   color: #ffffff;
   font-size: 28px;
@@ -378,7 +378,7 @@
 .home .label-6 {
   position: relative;
   width: fit-content;
-  font-family: "Space Grotesk-Regular", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 400;
   color: var(--black);
   font-size: 20px;
@@ -490,7 +490,7 @@
 .home .label-10 {
   position: relative;
   width: fit-content;
-  font-family: "Space Grotesk-Regular", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 400;
   color: #ffffff;
   font-size: 20px;
@@ -1077,7 +1077,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: "Space Grotesk-Regular", Helvetica;
+  font-family: "Pretendard", Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
   font-weight: 400;
   color: #ffffff;
   font-size: 18px;

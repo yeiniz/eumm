@@ -4,6 +4,7 @@
   <head>
     <meta name="viewport" content="width=1440, initial-scale=0.25" />
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style_animated.css" />
@@ -325,17 +326,39 @@
   
 <script>
   function openModal(id) {
-    document.getElementById(id).style.display = "block";
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.style.display = "block";
   }
-  window.onclick = function(event) {
+
+  // Close when tapping/clicking the backdrop only (works on mobile & desktop)
+  function attachModalListeners() {
     const modals = document.querySelectorAll(".modal");
-    modals.forEach(m => {
-      if (event.target === m) {
-        m.style.display = "none";
-      }
+    modals.forEach((modal) => {
+      const closeOnBackdrop = (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+      // Ensure previous listeners aren't duplicated
+      modal.replaceWith(modal.cloneNode(true)); // clone to remove potential inline listeners
+    });
+
+    // Re-query after clone
+    const freshModals = document.querySelectorAll(".modal");
+    freshModals.forEach((modal) => {
+      const closeOnBackdrop = (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+      modal.addEventListener("click", closeOnBackdrop, { passive: true });
+      modal.addEventListener("touchstart", closeOnBackdrop, { passive: true });
     });
   }
+
   window.addEventListener('DOMContentLoaded', () => {
+    // Reveal animations
     const els = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
@@ -352,6 +375,9 @@
       }
       io.observe(el);
     });
+
+    // Modal backdrop close handlers
+    attachModalListeners();
   });
 </script>
 
