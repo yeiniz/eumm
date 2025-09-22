@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="globals.css" />
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style_animated.css" />
   </head>
   <body>
+    <div id="scale-wrapper">
     <div class="home">
       <div class="heading-subheading reveal">
         <div class="heading">
@@ -325,6 +326,44 @@
     </div>
   
 <script>
+  (function() {
+    const DESIGN_WIDTH = 1440; // 네가 디자인한 기준 폭
+    const root = document.querySelector('.home') || document.body.firstElementChild;
+    if (!root) return;
+
+    // 래퍼가 없다면 자동으로 만들어 감싼다
+    let wrapper = document.getElementById('scale-wrapper');
+    if (!wrapper) {
+      wrapper = document.createElement('div');
+      wrapper.id = 'scale-wrapper';
+      root.parentNode.insertBefore(wrapper, root);
+      wrapper.appendChild(root);
+    }
+
+    // 스케일 적용을 위한 클래스 부여
+    root.classList.add('scale-root');
+    // 디자인 기준 폭 고정(스케일 기준)
+    root.style.width = DESIGN_WIDTH + 'px';
+    root.style.margin = '0 auto';
+
+    function applyScale() {
+      const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      const scale = Math.min(1, vw / DESIGN_WIDTH); // 1440보다 넓으면 스케일 1 (무변경)
+      root.style.transform = (scale < 1) ? `scale(${scale})` : 'none';
+
+      // 스케일 후의 실제 높이로 wrapper 높이 보정 (스크롤 정상화)
+      const rect = root.getBoundingClientRect(); // transform 반영된 크기
+      wrapper.style.height = rect.height + 'px';
+    }
+
+    // 초기 1회 + 리사이즈시마다
+    applyScale();
+    window.addEventListener('resize', applyScale);
+
+    // 내부 콘텐츠가 동적으로 변해도 높이 보정
+    const ro = new ResizeObserver(applyScale);
+    ro.observe(root);
+  })();
   function openModal(id) {
     const modal = document.getElementById(id);
     if (!modal) return;
@@ -380,6 +419,6 @@
     attachModalListeners();
   });
 </script>
-
+</div>
 </body>
 </html>
