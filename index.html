@@ -63,26 +63,27 @@
       </div>
       <div class="services-block reveal">
         <div class="cards-section">
+          <!-- 카드 1: 일상 대화하기 -->
           <div class="reveal card">
             <div class="heading-and-link">
               <div class="heading">
                 <div class="label-wrapper"><div class="label-4">일상 대화하기</div></div>
-                <div class="label-wrapper"><div class="label-5"></div></div>
               </div>
-              <div class="link">
+              <div class="link" onclick="openModal('modal1')">
                 <img class="icon" src="img/arrow_1.svg" />
                 <div class="label-6">Learn more</div>
               </div>
             </div>
             <img class="img" src="img/chat.svg" />
           </div>
+
+          <!-- 카드 2: 회상 인지 훈련 -->
           <div class="reveal card-2">
             <div class="heading-and-link">
               <div class="heading">
                 <div class="label-7"><div class="label-8">회상 인지 훈련</div></div>
-                <div class="label-7"><div class="label-8"></div></div>
               </div>
-              <div class="link">
+              <div class="link" onclick="openModal('modal2')">
                 <img class="icon" src="img/arrow_2.svg" />
                 <div class="label-6">Learn more</div>
               </div>
@@ -90,27 +91,29 @@
             <img class="img" src="img/camera.svg" />
           </div>
         </div>
+
         <div class="cards-section-2">
+          <!-- 카드 3: 대화 리포트 확인 -->
           <div class="reveal card-2">
             <div class="heading-and-link">
               <div class="heading">
                 <div class="label-7"><div class="label-9">대화 리포트 확인</div></div>
-                <div class="label-7"><div class="label-9"></div></div>
               </div>
-              <div class="link">
+              <div class="link" onclick="openModal('modal3')">
                 <img class="icon" src="img/arrow_2.svg" />
                 <div class="label-6">Learn more</div>
               </div>
             </div>
             <img class="img" src="img/report.svg" />
           </div>
+
+          <!-- 카드 4: 기록 관리 -->
           <div class="reveal card">
             <div class="heading-and-link-2">
               <div class="heading">
                 <div class="label-wrapper"><div class="label-4">기록 관리</div></div>
-                <div class="label-wrapper"><div class="label-5"></div></div>
               </div>
-              <div class="link">
+              <div class="link" onclick="openModal('modal4')">
                 <img class="icon" src="img/arrow_1.svg" />
                 <div class="label-6">Learn more</div>
               </div>
@@ -119,6 +122,32 @@
           </div>
         </div>
       </div>
+
+      <!-- 모달 4개 -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <p>상세 페이지 준비중..</p>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <p>상세 페이지 준비중..</p>
+        </div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <p>상세 페이지 준비중..</p>
+        </div>
+      </div>
+
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <p>상세 페이지 준비중..</p>
+        </div>
+      </div>
+      
       <div class="CTA-block reveal">
         <div class="CTA">
           <div class="text-button-wrapper">
@@ -295,6 +324,17 @@
     </div>
   
 <script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(m => {
+      if (event.target === m) {
+        m.style.display = "none";
+      }
+    });
+  }
   window.addEventListener('DOMContentLoaded', () => {
     const els = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries, obs) => {
