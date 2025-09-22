@@ -1,35 +1,36 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_animated.css" />
   </head>
   <body>
     <div class="home">
-      <div class="heading-subheading">
+      <div class="heading-subheading reveal">
         <div class="heading">
-          <div id="services" class="label"><p class="text-wrapper">* 이음이와 무엇을 할 수 있나요? *</p></div>
+          <div class="label"><p class="text-wrapper">* 이음이와 무엇을 할 수 있나요? *</p></div>
         </div>
       </div>
-      <div class="heading-wrapper">
+      <div class="heading-wrapper reveal">
         <div class="heading">
           <div class="label"><p class="text-wrapper">* 이음이는 왜 만들어졌나요? *</p></div>
         </div>
       </div>
-      <div class="div-wrapper">
+      <div class="div-wrapper reveal">
         <div class="heading">
-          <div id="member" class="label-wrapper"><p class="div">* 팀 이음을 소개합니다! *</p></div>
+          <div class="label-wrapper"><p class="div">* 팀 이음을 소개합니다! *</p></div>
         </div>
       </div>
       <div class="landing-page">
         <div class="navigation-bar">
           <img class="image" src="img/logo.png" />
           <div class="frame">
-            <div class="text-wrapper-2" data-target="#services">About 이음</div>
-            <div class="text-wrapper-2" data-target="#member">Member</div>
+            <a class="text-wrapper-2" href="#services">About 이음</a>
+            <a class="text-wrapper-2" href="#member">Member</a>
             <a class="text-wrapper-2" 
               href="https://github.com/IBM-hackathon-dementia" 
               target="_blank" 
@@ -37,7 +38,7 @@
             <button class="button"><div class="label-2">프로토타입 실행</div></button>
           </div>
         </div>
-        <header class="header">
+        <header class="header reveal">
           <div class="frame-2">
             <p class="p">
               <span class="span">안녕하세요.<br />저는 </span>
@@ -56,9 +57,9 @@
         </header>
         <div class="logotypes"></div>
       </div>
-      <div class="services-block">
+      <div id="services" class="services-block reveal">
         <div class="cards-section">
-          <div class="card">
+          <div class="reveal card">
             <div class="heading-and-link">
               <div class="heading">
                 <div class="label-wrapper"><div class="label-4">일상 대화하기</div></div>
@@ -71,7 +72,7 @@
             </div>
             <img class="img" src="img/chat.svg" />
           </div>
-          <div class="card-2">
+          <div class="reveal card-2">
             <div class="heading-and-link">
               <div class="heading">
                 <div class="label-7"><div class="label-8">회상 인지 훈련</div></div>
@@ -86,7 +87,7 @@
           </div>
         </div>
         <div class="cards-section-2">
-          <div class="card-2">
+          <div class="reveal card-2">
             <div class="heading-and-link">
               <div class="heading">
                 <div class="label-7"><div class="label-9">대화 리포트 확인</div></div>
@@ -99,7 +100,7 @@
             </div>
             <img class="img" src="img/report.svg" />
           </div>
-          <div class="card">
+          <div class="reveal card">
             <div class="heading-and-link-2">
               <div class="heading">
                 <div class="label-wrapper"><div class="label-4">기록 관리</div></div>
@@ -114,7 +115,7 @@
           </div>
         </div>
       </div>
-      <div class="CTA-block">
+      <div id="member" id="member" class="CTA-block reveal">
         <div class="CTA">
           <div class="text-button-wrapper">
             <div class="text-button">
@@ -128,9 +129,9 @@
         </div>
       </div>
       <img class="chatgpt-image-2" src="img/eumm_2.png" />
-      <div class="CTA-wrapper">
+      <div class="CTA-wrapper reveal">
         <div class="card-wrapper">
-          <div class="card-3">
+          <div class="reveal card-3">
             <div class="frame-3">
               <p class="text-wrapper-7">매 해 고령인구와 치매인구가 비약적으로 증가하며 요양보호사의 수요와 공급의 격차가 벌어지고 있음.</p>
               <div class="text-wrapper-8">고령 & 치매인구 증가</div>
@@ -149,10 +150,10 @@
           </div>
         </div>
       </div>
-      <div class="group-of-cards">
-        <div class="row">
-          <div class="eumm-png-wrapper"><img class="eumm-png" src="img/eumm_3.png" /></div>
-          <div class="content-wrapper">
+      <div class="group-of-cards reveal">
+        <div class="row reveal">
+          <div class="reveal eumm-png-wrapper"><img class="eumm-png" src="img/eumm_3.png" /></div>
+          <div class="reveal content-wrapper">
             <div class="content">
               <div class="person">
                 <div class="picture-and-name">
@@ -174,7 +175,7 @@
               <div class="text-wrapper-12">김수인 소개</div>
             </div>
           </div>
-          <div class="content-wrapper">
+          <div class="reveal content-wrapper">
             <div class="content">
               <div class="person">
                 <div class="picture-and-name">
@@ -197,8 +198,8 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="card-4">
+        <div class="row reveal">
+          <div class="reveal card-4">
             <div class="content">
               <div class="person">
                 <div class="picture-and-name">
@@ -220,7 +221,7 @@
               <div class="text-wrapper-12">김예인 소개</div>
             </div>
           </div>
-          <div class="card-4">
+          <div class="reveal card-4">
             <div class="content">
               <div class="person">
                 <div class="picture-and-name">
@@ -242,7 +243,7 @@
               <div class="text-wrapper-12">김정민 소개</div>
             </div>
           </div>
-          <div class="card-4">
+          <div class="reveal card-4">
             <div class="content">
               <div class="person">
                 <div class="picture-and-name">
@@ -266,7 +267,7 @@
           </div>
         </div>
       </div>
-      <div class="footer-block">
+      <div class="footer-block reveal">
         <div class="footer">
           <div class="navigation-and">
             <div class="contact-us-wrapper">
@@ -288,30 +289,27 @@
         </div>
       </div>
     </div>
-  <script>
-  document.querySelectorAll('.text-wrapper-2').forEach(el => {
-    const target = el.dataset.target;
-    if (!target) return;
-
-    el.style.cursor = 'pointer';
-    el.setAttribute('role', 'link');
-    el.tabIndex = 0;
-
-    const go = () => {
-      if (el.dataset.external === 'true' || /^https?:\/\//.test(target)) {
-        window.open(target, '_blank', 'noopener');
-      } else if (target.startsWith('#')) {
-        const dest = document.querySelector(target);
-        dest?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState(null, '', target);
+  
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        const el = entry.target;
+        if (entry.isIntersecting) {
+          el.classList.add('is-visible');
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach((el, i) => {
+      if (!el.style.getPropertyValue('--delay')) {
+        el.style.setProperty('--delay', `${Math.min(i * 80, 480)}ms`);
       }
-    };
-
-    el.addEventListener('click', go);
-    el.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+      io.observe(el);
     });
   });
 </script>
-  </body>
+
+</body>
 </html>

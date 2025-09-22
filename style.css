@@ -1087,3 +1087,52 @@
 }
 
 html { scroll-behavior: smooth; }
+
+
+/* === Reveal animations === */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; opacity: 1; transform: none; }
+}
+
+/* === Polished micro-interactions === */
+.card, .card-2, .card-3, .card-4, .content-wrapper, .eumm-png-wrapper {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover, .card-2:hover, .card-3:hover, .card-4:hover,
+.content-wrapper:hover, .eumm-png-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+.button, .button-2 {
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.button:hover, .button-2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+.text-wrapper-2 {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color .2s ease, transform .2s ease;
+}
+.text-wrapper-2:hover {
+  transform: translateY(-1px);
+}
+
+
+/* Optional motion variants */
+.reveal[data-reveal="slide-left"]  { transform: translateX(24px); }
+.reveal[data-reveal="slide-right"] { transform: translateX(-24px); }
+.reveal[data-reveal="scale"]       { transform: scale(.96); }
