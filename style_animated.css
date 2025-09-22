@@ -1151,8 +1151,21 @@ html { scroll-behavior: smooth; }
   cursor: pointer;
 }
 
-
 /* Optional motion variants */
 .reveal[data-reveal="slide-left"]  { transform: translateX(24px); }
 .reveal[data-reveal="slide-right"] { transform: translateX(-24px); }
 .reveal[data-reveal="scale"]       { transform: scale(.96); }
+
+@media (min-width: 1440px) {
+  .home {
+    width: 100% !important;      /* 뷰포트보다 커지지 않게 */
+    max-width: 1440px !important;/* 디자인 기준 폭 */
+    min-width: 0 !important;     /* 기존 min-width:100% 무력화 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important; /* 자식 absolute 기준 유지 */
+    left: auto !important;        /* 혹시 다른 곳에서 left를 줬다면 무력화 */
+    right: auto !important;
+    transform: none !important;   /* translateX 등 있으면 제거 */
+  }
+}
