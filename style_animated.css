@@ -1163,9 +1163,17 @@ html { scroll-behavior: smooth; }
     min-width: 0 !important;     /* 기존 min-width:100% 무력화 */
     margin-left: auto !important;
     margin-right: auto !important;
+    overflow: visible !important;  /* 혹시 다른 곳에서 overflow 걸렸다면 무력화 */
     position: relative !important; /* 자식 absolute 기준 유지 */
     left: auto !important;        /* 혹시 다른 곳에서 left를 줬다면 무력화 */
     right: auto !important;
     transform: none !important;   /* translateX 등 있으면 제거 */
+  }
+}
+
+@media (min-width: 1440px) {
+  .page-center,
+  #scale-wrapper {
+    overflow: visible !important; /* 스크롤은 오직 html/body */
   }
 }
