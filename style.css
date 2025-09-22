@@ -607,7 +607,7 @@
 .home .star-wrapper {
   position: relative;
   top: -26px;
-  left: 247px;
+  left: 400px;
   width: 209px;
   display: flex;
   transform: rotate(180deg);
@@ -753,7 +753,7 @@
 
 .home .eumm-png {
   position: relative;
-  width: 387px;
+  width: 330px;
   height: 290px;
   margin-bottom: -39.00px;
   margin-left: -35.00px;
